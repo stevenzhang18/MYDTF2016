@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+ <title>Buy 1</title>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+  <style>
+    .nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://www.adamchudy.com/wp-content/uploads/2015/05/books.jpg');
+  height: 750px;
+  opacity: .85;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.buysell{
+  background-color: #ECECEA;
+}
+
+.buysell h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buysell a {
+  color: #000000;
+}
+
+#button{
+     border-top: 1px solid #EEE;
+     background:#A5A5A3;
+     height: 100px:;
+     border-radius: 5px;
+     width: 200px;
+     box-shadow: rgba(0,0,0,1) 0 1px 0;
+     color: white;
+     font-size: 15px;
+     font-family: verdana, serif;
+     text-decoration: none;
+     vertical-align: center;
+     text-align: center;
+     display: block;
+
+}
+#button :hover{
+
+  background:#E4E4E3;
+  opacity: 0.7;
+}
+
+#searchheader{
+  background-color:#c3efef;
+}
+#searchnewsearch{
+  float:left;
+
+}
+.searchtextinput{
+  margin: 5;
+  padding: 5px 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border:2px solid #0076a3;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+  display:inline-block;
+  position: relative;
+  margin-bottom: 3px;
+  margin-left: 3px;
+}
+
+.searchtextinput2{
+  margin: 5;
+  padding: 5px 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border:2px solid #0076a3;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+  display:inline-block;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+
+}
+
+.searchbutton {
+  margin: 1;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+  background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+  border-top-left-radius: 5px 5px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
+  display:inline-block;
+  margin-left: 700px;
+}
+.searchbutton:hover {
+  text-decoration: none;
+  background: #007ead;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+
+.searchclear{
+  clear:both;
+}
+#dropdown{
+  margin: 0;
+  padding: 5px 15px;
+  display:inline-block;
+}
+div.transbox {
+  margin: 130px;
+  background-color: #ffffff;
+  border: 20px solid white;
+  opacity: 2;
+  filter: alpha(opacity=1000); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 30%;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+  </style>
+ 
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 id="name">Da Textbook Finder</h1>
+        <p><font size="6"><b>Search for Books</b></font></p>
+        <div class="transbox" style="background-color: rgba(255, 0, 0, 1.0)">
+        <div id="searchheader">
+          <form action ="BuyResults.html" method="POST">
+              <input type="text" placeholder="ISBN" id="ISBN" class="searchtextinput2" name="q" size="21" maxlength="120"><br><br>
+              <input type="text" placeholder="Title" id="Title"  class="searchtextinput" name="q" size="21" maxlength="120"><br>
+              <input type="text" placeholder="Author" id="Author" class="searchtextinput" name="q" size="21" maxlength="120"><br><br>
+              <input type="text" placeholder="Class"id="Class" class="searchtextinput" name="q" size="21" maxlength="120"><br><br>
+              <button type="submit" name="submit" class="searchbutton" onclick="search()"; onclick="confirm()">Search</button>
+          </form>
+        <div class="searchclear"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buysell">
+    <div class="container">
+
+    </div>
+  </div>
+  <script type="text/javascript">
+    function search(){
+        
+
+      var isbncompare = document.getElementById("ISBN").value;
+      var titlecompare =  document.getElementById("Title").value;
+      var authorcompare =  document.getElementById("Author").value;
+      var classcompare =  document.getElementById("Class").value;
+        
+        console.log(isbncompare);
+        console.log(titlecompare);
+        console.log(authorcompare);
+        console.log(classcompare);
+
+        if (localStorage.getItem('isbn')) {
+          isbnbuy = localStorage.getItem('isbn');
+      }
+      console.log(isbnbuy);
+
+
+      titlebuy = null;
+      if (localStorage.getItem('title')) {
+          titlebuy = localStorage.getItem('title');
+      }
+      console.log(titlebuy);
+
+
+      authorbuy = null;
+      if (localStorage.getItem('author')) {
+          authorbuy = localStorage.getItem('author');
+      }
+      console.log(authorbuy);
+
+      coursebuy = null;
+      if (localStorage.getItem('coursename')) {
+          coursebuy = localStorage.getItem('coursename');
+      }
+      console.log(coursebuy);
+
+      var results=0;
+      if(classcompare !=""){
+      for (var i = 0; i < coursebuy.length; i++) {
+      if(coursebuy.substring(i,i+classcompare.length)==classcompare){
+        results=results+1;
+      }
+    }
+  }
+
+    if(titlecompare !=""){
+    for (var i = 0; i < titlebuy.length; i++) {
+      if(titlebuy.substring(i,i+titlecompare.length)==titlecompare){
+        results=results+1;
+      }
+    }
+  }
+
+if(authorcompare !=""){
+    for (var i = 0; i < authorbuy.length; i++) {
+      if(authorbuy.substring(i,i+authorcompare.length)==authorcompare){
+        results=results+1;
+      }
+    }
+}
+
+if(isbncompare !=""){
+        for (var i = 0; i < isbnbuy.length; i++) {
+      if(isbnbuy.substring(i,i+isbncompare.length)==isbncompare){
+        results=results+1;
+      }
+    }
+  }
+
+      if(results>0){
+      localStorage.setItem('result', results);
+    }
+}
+  </script>
+
+  </body>
+</html>

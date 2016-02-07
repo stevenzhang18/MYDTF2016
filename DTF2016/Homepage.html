@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+  <style>
+    .nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('https://www.vitamindcouncil.org/wp-content/uploads/2014/02/textbook-research-e1393272565920-620x412.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.buysell h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buysell a {
+  color: #000000;
+}
+
+.kjp {
+  position: relative;
+  margin-left: 40px;
+}
+
+#button{
+     border-top: 1px solid #EEE;
+     background:#A5A5A3;
+     height: 100px:;
+     border-radius: 5px;
+     width: 200px;
+     box-shadow: rgba(0,0,0,1) 0 1px 0;
+     color: white;
+     font-size: 15px;
+     font-family: verdana, serif;
+     text-decoration: none;
+     vertical-align: center;
+     text-align: center;
+     display: block;
+
+}
+#button :hover{
+
+  background:#E4E4E3;
+  opacity: 0.7;
+}
+#submit {
+    background-color: #E1D2B5;
+    width: 200px;
+    color: black;
+    font-family: verdana, serif;
+    font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #C6A971;
+}
+
+#submit:hover {
+    border: 2px solid #C6A971;
+    background:#E1D2B5;
+    box-shadow: 0px 0px 5px #C6A971;
+}
+
+#cont {
+     position:relative;
+     left:-25px;
+}
+
+  </style>
+  <title>Da Textbook Finder</title>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 id="name">Da Textbook Finder</h1>
+        <p>The biggest textbook exchange ever</p>
+        <p class="kjp">Kevin, Jack, and Peiyong</p>
+      </div>
+    </div>
+
+    <div class="buysell">
+    <div id="cont" class="container">
+
+    <div style="width: 100%; display: table;">
+        <div style="display: table-row" align="center">
+        <div style="width: 600px; float: left; ">
+          <h3>Buy your textbooks</h3>
+          <p id="descriptiong">Find the most affordable price.</p>
+          <form action="buy1.html"><button type="submit" name="submit" id="submit">Buy</button></form>
+        </div>
+        <div style="margin-left: 620px;">
+          <h3>Sell your textbooks</h3>
+          <p id="description">Negotiate with others to find the price you need.</p>
+          <form action="sell.html"><button type="submit" name="submit" id="submit">Sell</button></form>
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>
+  </body>
+</html>
